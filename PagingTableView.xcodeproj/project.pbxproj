@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3847B81EA320AB00BC87B4 /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3847B71EA320AB00BC87B4 /* ContentCell.swift */; };
 		5B7DF7EB1EA3102300D38577 /* PagingTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7DF7E11EA3102300D38577 /* PagingTableView.framework */; };
 		5B7DF7F01EA3102300D38577 /* PagingTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF7EF1EA3102300D38577 /* PagingTableViewTests.swift */; };
 		5B7DF7F21EA3102300D38577 /* PagingTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B7DF7E41EA3102300D38577 /* PagingTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B7DF8031EA310DE00D38577 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8021EA310DE00D38577 /* AppDelegate.swift */; };
-		5B7DF8051EA310DE00D38577 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8041EA310DE00D38577 /* ViewController.swift */; };
+		5B7DF8051EA310DE00D38577 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8041EA310DE00D38577 /* MainViewController.swift */; };
 		5B7DF8081EA310DE00D38577 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DF8061EA310DE00D38577 /* Main.storyboard */; };
 		5B7DF80A1EA310DE00D38577 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DF8091EA310DE00D38577 /* Assets.xcassets */; };
 		5B7DF80D1EA310DE00D38577 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B7DF80B1EA310DE00D38577 /* LaunchScreen.storyboard */; };
 		5B7DF8131EA310EF00D38577 /* PagingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8121EA310EF00D38577 /* PagingTableView.swift */; };
 		5B7DF8151EA312F300D38577 /* PagingTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8141EA312F300D38577 /* PagingTableViewDelegate.swift */; };
+		5B7DF8171EA31AF700D38577 /* ContentDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7DF8161EA31AF700D38577 /* ContentDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3847B71EA320AB00BC87B4 /* ContentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		5B7DF7E11EA3102300D38577 /* PagingTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PagingTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7DF7E41EA3102300D38577 /* PagingTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagingTableView.h; sourceTree = "<group>"; };
 		5B7DF7E51EA3102300D38577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,13 +41,14 @@
 		5B7DF7F11EA3102300D38577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7DF8001EA310DE00D38577 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B7DF8021EA310DE00D38577 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B7DF8041EA310DE00D38577 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B7DF8041EA310DE00D38577 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B7DF8071EA310DE00D38577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B7DF8091EA310DE00D38577 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B7DF80C1EA310DE00D38577 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B7DF80E1EA310DE00D38577 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7DF8121EA310EF00D38577 /* PagingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingTableView.swift; sourceTree = "<group>"; };
 		5B7DF8141EA312F300D38577 /* PagingTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagingTableViewDelegate.swift; sourceTree = "<group>"; };
+		5B7DF8161EA31AF700D38577 /* ContentDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +121,13 @@
 			isa = PBXGroup;
 			children = (
 				5B7DF8021EA310DE00D38577 /* AppDelegate.swift */,
-				5B7DF8041EA310DE00D38577 /* ViewController.swift */,
+				5B7DF8041EA310DE00D38577 /* MainViewController.swift */,
+				5B7DF8161EA31AF700D38577 /* ContentDataSource.swift */,
 				5B7DF8061EA310DE00D38577 /* Main.storyboard */,
 				5B7DF8091EA310DE00D38577 /* Assets.xcassets */,
 				5B7DF80B1EA310DE00D38577 /* LaunchScreen.storyboard */,
 				5B7DF80E1EA310DE00D38577 /* Info.plist */,
+				5B3847B71EA320AB00BC87B4 /* ContentCell.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B7DF8051EA310DE00D38577 /* ViewController.swift in Sources */,
+				5B7DF8171EA31AF700D38577 /* ContentDataSource.swift in Sources */,
+				5B7DF8051EA310DE00D38577 /* MainViewController.swift in Sources */,
 				5B7DF8031EA310DE00D38577 /* AppDelegate.swift in Sources */,
+				5B3847B81EA320AB00BC87B4 /* ContentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +440,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PagingTableView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.yeoubi.PagingTableView;
@@ -452,7 +460,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = PagingTableView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.yeoubi.PagingTableView;
@@ -529,6 +537,7 @@
 				5B7DF7F71EA3102300D38577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B7DF7F81EA3102300D38577 /* Build configuration list for PBXNativeTarget "PagingTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +546,7 @@
 				5B7DF7FA1EA3102300D38577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B7DF80F1EA310DE00D38577 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +555,7 @@
 				5B7DF8111EA310DE00D38577 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
