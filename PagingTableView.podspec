@@ -8,6 +8,8 @@ Pod::Spec.new do |s|
   s.author       = { "InJung Chung" => "mu29@yeoubi.net" }
   s.source       = { :git => 'https://github.com/mu29/PagingTableView.git', :tag => s.version.to_s }
 
+  s.ios.deployment_target = '8.0'
+
   s.source_files = 'Sources'
   s.frameworks   = 'UIKit', 'Foundation'
 end
