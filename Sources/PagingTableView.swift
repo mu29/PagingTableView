@@ -14,11 +14,16 @@ open class PagingTableView: UITableView {
   private var indicator: UIActivityIndicatorView!
   internal var page: Int = 0
   internal var previousItemCount: Int = 0
-  open var pagingDelegate: PagingTableViewDelegate?
 
   open var currentPage: Int {
     get {
       return page
+    }
+  }
+
+  open var pagingDelegate: PagingTableViewDelegate? {
+    didSet {
+      pagingDelegate?.paginate(self, to: page)
     }
   }
 
@@ -34,7 +39,7 @@ open class PagingTableView: UITableView {
     pagingDelegate?.paginate(self, to: page)
   }
 
-  func paginate(_ tableView: PagingTableView, forIndexAt indexPath: IndexPath) {
+  open func paginate(_ tableView: PagingTableView, forIndexAt indexPath: IndexPath) {
     let itemCount = tableView.dataSource?.tableView(tableView, numberOfRowsInSection: indexPath.section) ?? 0
     guard indexPath.row == itemCount - 1 else { return }
     guard previousItemCount != itemCount else { return }
@@ -81,16 +86,9 @@ open class PagingTableView: UITableView {
     loadingView.addConstraint(yCenterConstraint)
   }
 
-}
-
-extension PagingTableView: UITableViewDelegate {
-
-  public func tableView(
-    _ tableView: UITableView,
-    willDisplay cell: UITableViewCell,
-    forRowAt indexPath: IndexPath
-  ) {
+  override open func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
     paginate(self, forIndexAt: indexPath)
+    return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
   }
 
 }
