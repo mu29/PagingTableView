@@ -28,7 +28,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 First set your table view class in the storyboard to `PagingTableView`
 
-<img src="etc/usage1.gif" width="300" />
+<img src="etc/usage1.png" width="500" />
 
 Then implement `paginate` function. If `isLoading` is set to true, an indicator is displayed at the bottom of the table view. Otherwise, the indicator disappears and `UITableView.reloadData` is called.
 
@@ -36,7 +36,7 @@ Then implement `paginate` function. If `isLoading` is set to true, an indicator 
 class MainViewController: UIViewController {
 
   override func viewDidLoad() {
-  	...
+    ...
     contentTable.pagingDelegate = self
   }
 
