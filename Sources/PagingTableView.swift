@@ -52,7 +52,7 @@ open class PagingTableView: UITableView {
 
   private func hideLoading() {
     reloadData()
-    pagingDelegate?.didPaginate(self, to: page)
+    pagingDelegate?.didPaginate?(self, to: page)
     tableFooterView = nil
   }
 

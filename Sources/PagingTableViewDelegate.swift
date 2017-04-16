@@ -8,9 +8,9 @@
 
 import UIKit
 
-public protocol PagingTableViewDelegate: class {
+@objc public protocol PagingTableViewDelegate: class {
 
-  func didPaginate(_ tableView: PagingTableView, to page: Int)
+  @objc optional func didPaginate(_ tableView: PagingTableView, to page: Int)
   func paginate(_ tableView: PagingTableView, to page: Int)
-  
+
 }
