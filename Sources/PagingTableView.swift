@@ -21,7 +21,7 @@ open class PagingTableView: UITableView {
     }
   }
 
-  open var pagingDelegate: PagingTableViewDelegate? {
+  open weak var pagingDelegate: PagingTableViewDelegate? {
     didSet {
       pagingDelegate?.paginate(self, to: page)
     }
