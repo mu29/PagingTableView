@@ -13,7 +13,7 @@ open class PagingTableView: UITableView {
   private var loadingView: UIView!
   private var indicator: UIActivityIndicatorView!
   internal var page: Int = 0
-  internal var previousItemCount: Int = 0
+  internal var previousItemCount: [Int:Int] = [:]
 
   open var currentPage: Int {
     get {
@@ -35,16 +35,16 @@ open class PagingTableView: UITableView {
 
   open func reset() {
     page = 0
-    previousItemCount = 0
+    previousItemCount = [:]
     pagingDelegate?.paginate(self, to: page)
   }
 
   private func paginate(_ tableView: PagingTableView, forIndexAt indexPath: IndexPath) {
     let itemCount = tableView.dataSource?.tableView(tableView, numberOfRowsInSection: indexPath.section) ?? 0
     guard indexPath.row == itemCount - 1 else { return }
-    guard previousItemCount != itemCount else { return }
+    guard previousItemCount[indexPath.section] != itemCount else { return }
     page += 1
-    previousItemCount = itemCount
+    previousItemCount[indexPath.section] = itemCount
     pagingDelegate?.paginate(self, to: page)
   }
 
